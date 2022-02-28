@@ -6,11 +6,12 @@ class People {
     private $pdo;
 
     public function __construct() {
-        $this->pdo = new PDO("mysql:host=localhost;dbname=foo;", "<username>", "<password>");
+        # Replace "admin" and "6Ec4JfFHsYwm" below with your DB username and password!
+        $this->pdo = new PDO("mysql:host=localhost;dbname=foo;", "admin", "6Ec4JfFHsYwm");
     }
 
     public function fetchAll() {
-        $query = $pdo->prepare("select * from people");
+        $query = $this->pdo->prepare("select * from people");
         $query->execute();
         return $query->fetchAll();
     }
