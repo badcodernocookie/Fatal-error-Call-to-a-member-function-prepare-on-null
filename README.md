@@ -12,8 +12,9 @@ Some flavor of Linux with Docker installed
 
 To run the Docker image, simply execute the `run.sh` script.
 
-Once it's running, execute the SQL in `people.sql` file in the database and then you'll be ready to interract with the
-example PHP files.
+Once it's running, execute the SQL in `people.sql` file in the database and then change the credentials in each of the
+PHP files. The username "admin" will always be the same, but the password will be different. The password can be found
+in the standard output of the Docker container once it's finished booting.
 
 For an in-depth look at how to reproduce and fix the "Fatal error: Call to a member function prepare() on null"
 error and a walk-through of this code,
